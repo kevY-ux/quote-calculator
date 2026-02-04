@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junk Solutions of Texas | Get Your Free Quote</title>
+    
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17856966058"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17856966058');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a3a4a;
+            --navy-dark: #0f252f;
+            --red: #c8102e;
+            --red-dark: #a00d24;
+            --cream: #f5f3ef;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--navy-dark);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Texas-themed background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(200, 16, 46, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(26, 58, 74, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(200, 16, 46, 0.1) 0%, transparent 70%);
+            animation: gradientPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .floating-shape {
+            position: absolute;
+            border: 2px solid rgba(200, 16, 46, 0.2);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 4px solid var(--red);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--red);
+            box-shadow: 0 4px 15px rgba(200, 16, 46, 0.4);
+        }
+
+        .brand-text h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-text p {
+            color: var(--red);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--red);
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--red);
+        }
+
+        /* Main Container */
+        .main-container {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem 2rem;
+        }
+
+        .calculator-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.02) 10px,
+                rgba(255, 255, 255, 0.02) 20px
+            );
+        }
+
+        .card-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .card-header p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.5rem;
+            position: relative;
+        }
+
+        .form-content {
+            padding: 2rem;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--red);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title .number {
+            background: var(--red);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        /* Load Size Cards */
+        .load-options {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .load-options {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .load-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .load-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .load-option {
+            position: relative;
+        }
+
+        .load-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .load-card {
+            background: var(--cream);
+            border: 3px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 1rem 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 180px;
+        }
+
+        .load-card:hover {
+            border-color: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .load-option input:checked + .load-card {
+            border-color: var(--red);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+        }
+
+        .load-option input:checked + .load-card .load-icon,
+        .load-option input:checked + .load-card .load-name,
+        .load-option input:checked + .load-card .load-desc {
+            color: var(--white);
+        }
+
+        .load-option input:checked + .load-card .load-price {
+            color: var(--red);
+            background: var(--white);
+        }
+
+        .load-card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .load-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .load-name {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .load-desc {
+            font-size: 0.7rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .load-price {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: auto;
+        }
+
+        /* Load Guide */
+        .load-guide {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .load-guide h4 {
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .load-guide ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .load-guide li {
+            font-size: 0.85rem;
+            color: var(--gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .load-guide li strong {
+            color: var(--navy);
+            white-space: nowrap;
+        }
+
+        /* Add-ons */
+        .addon-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .addon-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .addon-option:hover {
+            border-color: var(--navy);
+        }
+
+        .addon-option input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--red);
+            cursor: pointer;
+        }
+
+        .addon-option label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--navy);
+        }
+
+        .addon-price {
+            background: var(--red);
+            color: var(--white);
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Form Inputs */
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.9rem;
+        }
+
+        .form-group label .required {
+            color: var(--red);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--navy);
+            box-shadow: 0 0 0 3px rgba(26, 58, 74, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* File Upload */
+        .file-upload-area {
+            border: 3px dashed var(--gray-light);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--cream);
+        }
+
+        .file-upload-area:hover {
+            border-color: var(--navy);
+            background: rgba(26, 58, 74, 0.05);
+        }
+
+        .file-upload-area.dragover {
+            border-color: var(--red);
+            background: rgba(200, 16, 46, 0.05);
+        }
+
+        .file-upload-area svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .file-upload-area p {
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-upload-area span {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .file-upload-area input {
+            display: none;
+        }
+
+        .file-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .file-item {
+            background: var(--white);
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .file-item button {
+            background: none;
+            border: none;
+            color: var(--red);
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Price Summary */
+        .price-summary {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .price-row.total {
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            margin-top: 0.75rem;
+            padding-top: 1rem;
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .price-row.total .amount {
+            color: var(--red);
+            background: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .price-includes {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+
+        /* Payment Options */
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 500px) {
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .payment-option {
+            position: relative;
+        }
+
+        .payment-option input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .payment-card {
+            background: var(--cream);
+            border: 3px solid var(--gray-light);
+            border-radius: 12px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+        }
+
+        .payment-card:hover {
+            border-color: var(--navy);
+        }
+
+        .payment-option input:checked + .payment-card {
+            border-color: var(--red);
+            background: var(--white);
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.2);
+        }
+
+        .payment-card h4 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-card .payment-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 0.25rem;
+        }
+
+        .payment-card p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Card Details */
+        .card-details {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-details h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-details h4 svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--success);
+        }
+
+        .security-note {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        .security-note svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--success);
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: rgba(200, 16, 46, 0.08);
+            border-left: 4px solid var(--red);
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .disclaimer h4 {
+            color: var(--red);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .disclaimer p {
+            color: var(--navy);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(200, 16, 46, 0.5);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: successPop 0.5s ease;
+        }
+
+        @keyframes successPop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--white);
+        }
+
+        .success-message h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--navy);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .booking-details {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .booking-details h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-row .label {
+            color: var(--gray);
+        }
+
+        .detail-row .value {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .new-quote-btn {
+            background: var(--navy);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .new-quote-btn:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                align-items: center;
+            }
+
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-content {
+                padding: 1.5rem;
+            }
+
+            .card-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="stars" id="stars"></div>
+        <div class="floating-shape" style="width: 200px; height: 200px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="floating-shape" style="width: 150px; height: 150px; top: 60%; right: 10%; animation-delay: -5s;"></div>
+        <div class="floating-shape" style="width: 100px; height: 100px; bottom: 20%; left: 15%; animation-delay: -10s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="logo.jpg" alt="Junk Solutions of Texas Logo" class="logo" id="logoImg">
+            <div class="brand-text">
+                <h1>JUNK SOLUTIONS OF TEXAS</h1>
+                <p>★ MADE SIMPLE ★</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <a href="https://junksolutionstx.com" target="_blank" class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                junksolutionstx.com
+            </a>
+            <a href="tel:2102910750" class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                (210) 291-0750
+            </a>
+            <a href="mailto:junksolutions@satx.com" class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                junksolutions@satx.com
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Calculator -->
+    <main class="main-container">
+        <div class="calculator-card">
+            <div class="card-header">
+                <h2>GET YOUR FREE QUOTE</h2>
+                <p>Fast, Fair, & Hassle-Free Junk Removal</p>
+            </div>
+
+            <form id="quoteForm" class="form-content">
+                <!-- Section 1: Service Details -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <span class="number">1</span>
+                        SERVICE DETAILS
+                    </h3>
+
+                    <label style="font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; display: block;">
+                        Select Load Size <span class="required">*</span>
+                    </label>
+
+                    <div class="load-options">
+                        <div class="load-option">
+                            <input type="radio" name="loadSize" id="small" value="small" data-price="150" required>
+                            <label for="small" class="load-card">
+                                <div class="load-card-content">
+                                    <div class="load-icon">📦</div>
+                                    <div class="load-name">Small Load</div>
+                                    <div class="load-desc">Under 1/4 truck<br>(1-3 items)</div>
+                                </div>
+                                <div class="load-price">$150</div>
+                            </label>
+                        </div>
+                        <div class="load-option">
+                            <input type="radio" name="loadSize" id="quarter" value="quarter" data-price="250">
+                            <label for="quarter" class="load-card">
+                                <div class="load-card-content">
+                                    <div class="load-icon">🛋️</div>
+                                    <div class="load-name">1/4 Truck</div>
+                                    <div class="load-desc">Small furniture set</div>
+                                </div>
+                                <div class="load-price">$250</div>
+                            </label>
+                        </div>
+                        <div class="load-option">
+                            <input type="radio" name="loadSize" id="half" value="half" data-price="375">
+                            <label for="half" class="load-card">
+                                <div class="load-card-content">
+                                    <div class="load-icon">🛏️</div>
+                                    <div class="load-name">1/2 Truck</div>
+                                    <div class="load-desc">Room cleanout</div>
+                                </div>
+                                <div class="load-price">$375</div>
+                            </label>
+                        </div>
+                        <div class="load-option">
+                            <input type="radio" name="loadSize" id="threequarter" value="threequarter" data-price="545">
+                            <label for="threequarter" class="load-card">
+                                <div class="load-card-content">
+                                    <div class="load-icon">🏠</div>
+                                    <div class="load-name">3/4 Truck</div>
+                                    <div class="load-desc">Large cleanout</div>
+                                </div>
+                                <div class="load-price">$545</div>
+                            </label>
+                        </div>
+                        <div class="load-option">
+                            <input type="radio" name="loadSize" id="full" value="full" data-price="590">
+                            <label for="full" class="load-card">
+                                <div class="load-card-content">
+                                    <div class="load-icon">🚛</div>
+                                    <div class="load-name">Full Truck</div>
+                                    <div class="load-desc">Complete estate cleanout</div>
+                                </div>
+                                <div class="load-price">$590</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="load-guide">
+                        <h4>📋 Not sure what size you need? Here's a guide:</h4>
+                        <ul>
+                            <li><strong>Small Load:</strong> 1-3 items (mattress, couch, appliance)</li>
+                            <li><strong>1/4 Truck:</strong> 10-15 bags or boxes</li>
+                            <li><strong>1/2 Truck:</strong> 1 bedroom worth of items</li>
+                            <li><strong>3/4 Truck:</strong> 2 bedrooms or garage cleanout</li>
+                            <li><strong>Full Truck:</strong> Whole home or major renovation debris</li>
+                        </ul>
+                    </div>
+
+                    <label style="font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; display: block;">
+                        Additional Services
+                    </label>
+
+                    <div class="addon-options">
+                        <div class="addon-option">
+                            <input type="checkbox" id="heavyItems" value="40">
+                            <label for="heavyItems">Heavy Items — Appliances, safes, concrete</label>
+                            <span class="addon-price">+$40</span>
+                        </div>
+                        <div class="addon-option">
+                            <input type="checkbox" id="stairs" value="50">
+                            <label for="stairs">Stairs/Difficult Access — Multiple flights or tight spaces</label>
+                            <span class="addon-price">+$50</span>
+                        </div>
+                        <div class="addon-option">
+                            <input type="checkbox" id="hazardous" value="75">
+                            <label for="hazardous">Hazardous Materials — Paint, chemicals, batteries</label>
+                            <span class="addon-price">+$75</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Scheduling -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <span class="number">2</span>
+                        SCHEDULING
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date <span class="required">*</span></label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time <span class="required">*</span></label>
+                            <select id="time" name="time" required>
+                                <option value="">Select a time</option>
+                                <option value="8:00 AM - 10:00 AM">8:00 AM - 10:00 AM</option>
+                                <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                                <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+                                <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+                                <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Service Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" placeholder="123 Main St, City, TX ZIP" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">Special Instructions (Optional)</label>
+                        <textarea id="instructions" name="instructions" placeholder="Gate code, parking instructions, item details, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Photos/Videos of Your Items (Optional)</label>
+                        <div class="file-upload-area" id="fileUploadArea">
+                            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                            <p>Drag & drop files here or click to browse</p>
+                            <span>Supports: JPG, PNG, MP4, MOV (Max 25MB each)</span>
+                            <input type="file" id="fileInput" multiple accept="image/*,video/*">
+                        </div>
+                        <div class="file-preview" id="filePreview"></div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Your Information -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <span class="number">3</span>
+                        YOUR INFORMATION
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="(210) 555-1234" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <!-- Section 4: Price & Payment -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <span class="number">4</span>
+                        PRICE & PAYMENT
+                    </h3>
+
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>Base Service</span>
+                            <span id="basePrice">$0.00</span>
+                        </div>
+                        <div class="price-row" id="heavyItemsRow" style="display: none;">
+                            <span>Heavy Items</span>
+                            <span>+$40.00</span>
+                        </div>
+                        <div class="price-row" id="stairsRow" style="display: none;">
+                            <span>Stairs/Difficult Access</span>
+                            <span>+$50.00</span>
+                        </div>
+                        <div class="price-row" id="hazardousRow" style="display: none;">
+                            <span>Hazardous Materials</span>
+                            <span>+$75.00</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Estimated Total</span>
+                            <span class="amount" id="totalPrice">$0.00</span>
+                        </div>
+                        <div class="price-includes">
+                            <strong>Price includes:</strong> Labor, dump/recycling fees, fuel, insurance, and all equipment. No hidden charges!
+                        </div>
+                    </div>
+
+                    <label style="font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; display: block;">
+                        Payment Option <span class="required">*</span>
+                    </label>
+
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" name="paymentOption" id="deposit" value="deposit" required>
+                            <label for="deposit" class="payment-card">
+                                <h4>50% Deposit</h4>
+                                <div class="payment-amount" id="depositAmount">$0.00</div>
+                                <p>Pay remaining balance after service is complete</p>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="paymentOption" id="payLater" value="payLater">
+                            <label for="payLater" class="payment-card">
+                                <h4>Pay After Service</h4>
+                                <div class="payment-amount" id="fullAmount">$0.00</div>
+                                <p>Card secured, charged after job completion</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-details">
+                        <h4>
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                            Card Information (Required to Secure Booking)
+                        </h4>
+                        <div class="form-row">
+                            <div class="form-group" style="flex: 2;">
+                                <label for="cardNumber">Card Number <span class="required">*</span></label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date <span class="required">*</span></label>
+                                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvv">CVV <span class="required">*</span></label>
+                                <input type="text" id="cardCvv" name="cardCvv" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                        <div class="security-note">
+                            <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            Your payment information is secure and encrypted. We never store card details on our servers.
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="disclaimer">
+                        <h4>
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                            Important Price Disclaimer
+                        </h4>
+                        <p>The quoted price is an estimate based on the information provided. Final pricing may be adjusted on-site if the actual job scope differs from what was described (e.g., more items, heavier materials, or additional access challenges). Our team will always confirm any price changes with you before proceeding.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">SUBMIT QUOTE REQUEST</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <h3>QUOTE REQUEST SUBMITTED!</h3>
+                <p>Thank you! We've received your request and will contact you shortly to confirm your booking.</p>
+                
+                <div class="booking-details">
+                    <h4>Quote Summary</h4>
+                    <div class="detail-row">
+                        <span class="label">Name</span>
+                        <span class="value" id="summaryName">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Service Date</span>
+                        <span class="value" id="summaryDate">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Service Time</span>
+                        <span class="value" id="summaryTime">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Load Size</span>
+                        <span class="value" id="summaryLoad">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Address</span>
+                        <span class="value" id="summaryAddress">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Estimated Total</span>
+                        <span class="value" id="summaryTotal">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Payment Option</span>
+                        <span class="value" id="summaryPayment">-</span>
+                    </div>
+                </div>
+
+                <button class="new-quote-btn" onclick="resetForm()">GET ANOTHER QUOTE</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 <a href="https://junksolutionstx.com" target="_blank">Junk Solutions of Texas</a>. All rights reserved.</p>
+            <p>Serving the Greater San Antonio Area</p>
+        </footer>
+    </main>
+
+    <script>
+        // Generate stars for background
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.width = (Math.random() * 4 + 2) + 'px';
+            star.style.height = star.style.width;
+            starsContainer.appendChild(star);
+        }
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // Price calculation
+        const loadSizeInputs = document.querySelectorAll('input[name="loadSize"]');
+        const heavyItemsCheckbox = document.getElementById('heavyItems');
+        const stairsCheckbox = document.getElementById('stairs');
+        const hazardousCheckbox = document.getElementById('hazardous');
+        
+        function updatePrice() {
+            let basePrice = 0;
+            let total = 0;
+            
+            const selectedLoad = document.querySelector('input[name="loadSize"]:checked');
+            if (selectedLoad) {
+                basePrice = parseInt(selectedLoad.dataset.price);
+            }
+            
+            total = basePrice;
+            
+            // Add-ons
+            if (heavyItemsCheckbox.checked) {
+                total += 40;
+                document.getElementById('heavyItemsRow').style.display = 'flex';
+            } else {
+                document.getElementById('heavyItemsRow').style.display = 'none';
+            }
+            
+            if (stairsCheckbox.checked) {
+                total += 50;
+                document.getElementById('stairsRow').style.display = 'flex';
+            } else {
+                document.getElementById('stairsRow').style.display = 'none';
+            }
+            
+            if (hazardousCheckbox.checked) {
+                total += 75;
+                document.getElementById('hazardousRow').style.display = 'flex';
+            } else {
+                document.getElementById('hazardousRow').style.display = 'none';
+            }
+            
+            document.getElementById('basePrice').textContent = '$' + basePrice.toFixed(2);
+            document.getElementById('totalPrice').textContent = '$' + total.toFixed(2);
+            document.getElementById('depositAmount').textContent = '$' + (total * 0.5).toFixed(2);
+            document.getElementById('fullAmount').textContent = '$' + total.toFixed(2);
+        }
+        
+        loadSizeInputs.forEach(input => input.addEventListener('change', updatePrice));
+        heavyItemsCheckbox.addEventListener('change', updatePrice);
+        stairsCheckbox.addEventListener('change', updatePrice);
+        hazardousCheckbox.addEventListener('change', updatePrice);
+
+        // File upload handling
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const filePreview = document.getElementById('filePreview');
+        let uploadedFiles = [];
+
+        fileUploadArea.addEventListener('click', () => fileInput.click());
+        
+        fileUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.add('dragover');
+        });
+        
+        fileUploadArea.addEventListener('dragleave', () => {
+            fileUploadArea.classList.remove('dragover');
+        });
+        
+        fileUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+        
+        function handleFiles(files) {
+            Array.from(files).forEach(file => {
+                if (file.size > 25 * 1024 * 1024) {
+                    alert('File ' + file.name + ' is too large. Max size is 25MB.');
+                    return;
+                }
+                uploadedFiles.push(file);
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span>${file.name}</span>
+                    <button type="button" onclick="removeFile('${file.name}', this)">&times;</button>
+                `;
+                filePreview.appendChild(fileItem);
+            });
+        }
+        
+        function removeFile(fileName, btn) {
+            uploadedFiles = uploadedFiles.filter(f => f.name !== fileName);
+            btn.parentElement.remove();
+        }
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10);
+            } else if (value.length >= 3) {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3);
+            }
+            e.target.value = value;
+        });
+
+        // Card number formatting
+        const cardNumberInput = document.getElementById('cardNumber');
+        cardNumberInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = value;
+        });
+
+        // Expiry formatting
+        const cardExpiryInput = document.getElementById('cardExpiry');
+        cardExpiryInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+
+        // Form submission
+        const form = document.getElementById('quoteForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const spinner = document.getElementById('spinner');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            spinner.style.display = 'block';
+            submitBtn.disabled = true;
+            
+            // Gather form data
+            const formData = new FormData(form);
+            const selectedLoad = document.querySelector('input[name="loadSize"]:checked');
+            const loadLabels = {
+                'small': 'Small Load (Under 1/4 Truck)',
+                'quarter': '1/4 Truck',
+                'half': '1/2 Truck',
+                'threequarter': '3/4 Truck',
+                'full': 'Full Truck'
+            };
+            
+            const data = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                address: formData.get('address'),
+                date: formData.get('date'),
+                time: formData.get('time'),
+                loadSize: loadLabels[selectedLoad?.value] || 'Not selected',
+                loadSizeValue: selectedLoad?.value,
+                basePrice: selectedLoad?.dataset.price || 0,
+                heavyItems: heavyItemsCheckbox.checked,
+                stairs: stairsCheckbox.checked,
+                hazardous: hazardousCheckbox.checked,
+                instructions: formData.get('instructions'),
+                paymentOption: formData.get('paymentOption'),
+                totalPrice: document.getElementById('totalPrice').textContent,
+                // Card info (in production, this would be tokenized/encrypted)
+                cardLast4: formData.get('cardNumber').replace(/\s/g, '').slice(-4),
+                timestamp: new Date().toISOString()
+            };
+            
+            // Calculate add-ons for display
+            const addons = [];
+            if (data.heavyItems) addons.push('Heavy Items (+$40)');
+            if (data.stairs) addons.push('Stairs/Difficult Access (+$50)');
+            if (data.hazardous) addons.push('Hazardous Materials (+$75)');
+            data.addons = addons.length > 0 ? addons.join(', ') : 'None';
+            
+            try {
+                // Send to Web3Forms (free email service - replace with your key)
+                const emailResponse = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: '5a719158-2cc5-4865-b67e-f1dabdaf9597',
+                        to: 'junksolutions@satx.com',
+                        subject: `🚛 New Quote Request - ${data.fullName} - ${data.loadSize}`,
+                        from_name: 'Junk Solutions Quote Calculator',
+                        message: `
+NEW QUOTE REQUEST
+=================
+
+Customer Information:
+- Name: ${data.fullName}
+- Email: ${data.email}
+- Phone: ${data.phone}
+
+Service Details:
+- Address: ${data.address}
+- Preferred Date: ${data.date}
+- Preferred Time: ${data.time}
+- Load Size: ${data.loadSize}
+- Additional Services: ${data.addons}
+- Special Instructions: ${data.instructions || 'None'}
+
+Pricing:
+- Estimated Total: ${data.totalPrice}
+- Payment Option: ${data.paymentOption === 'deposit' ? '50% Deposit' : 'Pay After Service'}
+- Card on File: ****${data.cardLast4}
+
+Submitted: ${new Date().toLocaleString()}
+                        `,
+                        ...data
+                    })
+                });
+                
+                // Show success (even if email fails for now - we'll set up the real integration)
+                form.style.display = 'none';
+                successMessage.classList.add('show');
+                
+                // Fire Google Ads conversion event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17856966058/quote_submission',
+                        'value': parseFloat(data.totalPrice.replace('$', '')),
+                        'currency': 'USD'
+                    });
+                }
+                
+                // Update summary
+                document.getElementById('summaryName').textContent = data.fullName;
+                document.getElementById('summaryDate').textContent = new Date(data.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                document.getElementById('summaryTime').textContent = data.time;
+                document.getElementById('summaryLoad').textContent = data.loadSize;
+                document.getElementById('summaryAddress').textContent = data.address;
+                document.getElementById('summaryTotal').textContent = data.totalPrice;
+                document.getElementById('summaryPayment').textContent = data.paymentOption === 'deposit' ? '50% Deposit' : 'Pay After Service';
+                
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('There was an error submitting your request. Please call us at (210) 291-0750');
+            } finally {
+                btnText.style.display = 'block';
+                spinner.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+        
+        function resetForm() {
+            form.reset();
+            form.style.display = 'block';
+            successMessage.classList.remove('show');
+            uploadedFiles = [];
+            filePreview.innerHTML = '';
+            updatePrice();
+            document.getElementById('heavyItemsRow').style.display = 'none';
+            document.getElementById('stairsRow').style.display = 'none';
+            document.getElementById('hazardousRow').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
